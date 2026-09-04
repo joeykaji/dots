@@ -4,7 +4,6 @@
 
 local keymap = vim.keymap
 
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with JK" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number"})
@@ -15,6 +14,11 @@ keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>=", "<C-w>=", { desc = "Make splits equal" })
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 keymap.set("n", "<leader>s<space>", "<C-w>w", { desc = "Move to the next window"})
+keymap.set("n", "<leader>wh", "<cmd>resize +5<cr>", { desc = "increase window height" })
+keymap.set("n", "<leader>ws", "<cmd>resize -5<cr>", { desc = "decrease window height" })
+keymap.set("n", "<leader>wj", "<cmd>vertical resize +5<cr>", { desc = "increase window width" })
+keymap.set("n", "<leader>wk", "<cmd>vertical resize -5<cr>", { desc = "decrease window width" })
+
 
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab"})
 keymap.set("n", "<leader>tc", "<cmd>tabclose<CR>", { desc = "Close current tab"})
@@ -29,5 +33,4 @@ keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file
 
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", {desc = "Find string in cwd" })
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", {desc = "Find string under cursor in cwd" })
-
 
