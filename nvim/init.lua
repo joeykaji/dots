@@ -1,6 +1,5 @@
-require("core")
 require("config.lazy")
-
+require("core")
 
 return {
 	"nvim-lua/plenary.nvim",
